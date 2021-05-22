@@ -31,6 +31,15 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      height: 600px;
+      border: 10px solid var(--yellow);
+      /* Be careful of percents (gaps aren't factored into this) */
+      /* Can us "fr" which is the fractional unit */
+      /* "fr" represent the amount of space left after all the elements are laid out */
+      /* 1 fr takes up remaining space; 1 fr 1 fr takes up remaining space in two equal columns */
+      grid-template-columns: 200px 2fr 1fr 1fr;
+      /* The "auto" keyword for sizing will fit that row/column to the largest element in the set */
+      grid-template-rows: 1fr 10fr 1fr 1fr;
     }
   </style>
 </body>
