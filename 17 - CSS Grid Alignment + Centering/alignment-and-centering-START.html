@@ -54,7 +54,7 @@
 
   <style>
     /*
-      justify-items:
+      justify-items: stretch (default), center, start, end, flex-start, flex-end
       align-items:
 
       justify-content:
@@ -70,7 +70,23 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      justify-items: stretch;
+      align-items: stretch;
+      /* place-items: center center will handle justify and align */
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </body>

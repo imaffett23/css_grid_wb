@@ -21,7 +21,11 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fill, 150px);
+      /* minmax() gives min and max ranges (good for flexilbilty) */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+      /* fit-content() will clamp values at a certain level */
+      /* grid-template-columns: fit-content(100px) 150px 150px 150px; */
     }
   </style>
 </body>
